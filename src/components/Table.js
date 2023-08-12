@@ -1,5 +1,3 @@
-import satData from "./satData.js";
-
 const Table = ({ sat }) => {
   
 return (

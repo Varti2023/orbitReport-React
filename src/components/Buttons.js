@@ -1,4 +1,3 @@
-import {useState} from "react";
 import satData from "./satData.js"; 
 import "./styling.css";
 
