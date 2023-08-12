@@ -1,10 +1,22 @@
-const Buttons = () => {
+import {useState} from "react";
+import satData from "./satData.js"; 
+import "./styling.css";
+
+                
+const Buttons = (props) =>
+ {
   return (
-    <div>
-      <button>Placeholder Button</button>
-      <button>All Orbits</button>
+      <div className="flex-container">
+       { props.displaySats.map((sat, id)  => {
+        return (
+        <button className="button" onClick={() => props.filterByType(sat)} key={id}>
+            {sat} Orbit
+        </button>);
+         })}
+        <button className="button" onClick={() => props.setSat(satData)}>All Orbits</button>
       </div>
-  );
-};
+    );
+   };
+
 
 export default Buttons;
